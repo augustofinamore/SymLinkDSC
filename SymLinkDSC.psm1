@@ -89,7 +89,7 @@ class SymLinkDSC {
                 New-Item -ItemType SymbolicLink -Path $this.LinksFolder -Name $this.Name -Value $this.Source -Force
             
             } catch {
-                Write-Error "Set failed Error:  $_ $($_.ScriptStackTrace)"
+                Write-Error "Set failed Error: $_ $($_.ScriptStackTrace)" -ErrorAction Stop
             }
         } 
         else {
