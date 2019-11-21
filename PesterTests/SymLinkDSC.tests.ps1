@@ -1,9 +1,5 @@
 ﻿using module ..\SymLinkDSC\SymLinkDSC.psd1
 
-Import-Module $PSScriptRoot\StubModules\NativeCommands.Stub.psm1 -force
-
-# Module with functions not available on buildserver
-
 InModuleScope SymLinkDSC {
     $module = Get-Module -Name SymLinkDSC
     $resources = $module.ExportedDscResources
